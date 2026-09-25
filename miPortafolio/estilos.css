@@ -1,0 +1,218 @@
+/* Formato de HTML */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Formato cuerpo en general */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #dba6da;
+  color: black;
+}
+
+/* Estilos Header */
+
+header {
+  background-color: #c385c1;
+  color: ghostwhite;
+
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 62px;
+  margin: 0;
+}
+
+header p {
+  font-size: 20px;
+  font-style: italic;
+
+  margin-top: 10px;
+}
+
+/* Etilos Navegacion */
+
+nav {
+  border-bottom: 2px solid #daaed9;
+  background-color: #e0bbdf;
+
+  display: flex;
+
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+nav a {
+  color: #5a1857;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+nav a:hover {
+  text-decoration: overline underline;
+}
+
+/* Contenedor Principal */
+
+main {
+  background-color: #efd2ee;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Secciones en general */
+
+section {
+  padding: 60px 40px;
+
+  border-bottom: 2px solid #daaed9;
+}
+
+section h2 {
+  color: #5a1857;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/* ================== Secciones individuales ================== */
+/* Seccione */
+
+.section-home {
+  
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.section-contenido{
+  max-width: 700px;
+}
+
+.section-contenido h2{
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.section-contenido p{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/*boton*/
+.boton, button{
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #482555;
+  color:#efd2ee;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.boton:hover,button:hover{
+  background-color: #79498a;
+  color: #f0e0ef;
+}
+
+/* seccion sobre mi*/
+.sobre-mi-contenido{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sobre-mi-contenido img{
+  width: 200px;
+  height:200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px dotted #5a1857;
+}
+
+.sobre-mi-contenido p{
+  font-size: 18px;
+}
+
+/* habilidades*/
+
+.lista-habilidades{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-habilidades li{
+  padding: 12px 20px;
+  background-color: #79498a;
+  border: 3px solid #5a1857;
+  border-radius: 10px;
+  font-weight: 500;
+  color:#efd2ee;
+}
+
+/*seccion proyectos*/
+
+.contenedor-proyectos{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.proyecto{
+  flex: 1;
+  min-width: 250px;
+  padding: 25px;
+  border: 1px solid #5a1857;
+  border-radius: 8px;
+  background-color: #f0e0ef;
+}
+
+.proyecto h3{
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.proyecto a{
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #482555;
+  color:#efd2ee;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500; 
+}
+
+.proyecto a:hover{
+  background-color: #79498a;
+  color: #f0e0ef;
+}
