@@ -91,7 +91,7 @@ section h2 {
 
 
 /* ================== Secciones individuales ================== */
-/* Seccione */
+/* Secciones */
 
 .section-home {
   
@@ -215,4 +215,106 @@ section h2 {
 .proyecto a:hover{
   background-color: #79498a;
   color: #f0e0ef;
+}
+
+/*Admin*/
+
+.admin-footer {
+    background-color: #482555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.admin-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.admin-nav {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.admin-nav a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    margin: 0 8px;
+}
+
+.admin-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.admin-card-small {
+    max-width: 600px;
+}
+
+.admin-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.admin-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.admin-form .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.admin-form input, 
+.admin-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.admin-form button {
+    background-color: #222;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+}
+
+.admin-form button:hover {
+    background-color: #444;
 }
