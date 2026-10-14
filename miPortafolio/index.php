@@ -78,19 +78,43 @@
           <!-- Seccion contacto -->
           <section>
             <h2> Contact name</h2>
-            <form action="">
-                <div>
+            <form id="formulario" action="guardar_mensaje.php" method="post">
+                <div class="campo">
                     <label for="">Nombre</label>
-                    <input type="text">
+                    <input 
+                    type="text"
+                    id="nombre"
+                    name="txtnombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                    >
                 </div>
-                <div>
+                <div class="campo">
                     <label for="">Correo</label>
-                    <input type="text">
+                    <input 
+                    type="text"
+                    id="email"
+                    name="txtcorreo"
+                    placeholder="ejemplo@correo"
+                    required
+                    >
                 </div>
-                <div>
+                <div class="campo">
                     <label for="">Mensaje</label>
-                    <textarea rows="5"></textarea>
+                    <textarea
+                    type="text"
+                    id="mensaje"
+                    name="txtmensaje" 
+                    rows="5"
+                    placeholder="Escribe tu mensaje"
+                    >
+                </textarea>
                 </div>
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
             </form>
           </section> 
     </main> 
