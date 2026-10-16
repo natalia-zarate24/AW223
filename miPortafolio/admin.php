@@ -12,10 +12,8 @@
         <p>Mensajes Recibidos</p>
     </header>
 
-    <nav class="admin-nav">
-        <a href="index.php" title="Regresar al portafolio">
-            <i class="fa-solid fa-house"></i>
-        </a>
+    <nav>
+        <a href='index.php'><img src='./images/home.png' style='width: 30px; height: auto; display: inline-block;'></a>
     </nav>
 
     <main>
@@ -53,8 +51,8 @@
                                     <td>".$arrMensaje['mensaje']."</td>
                                     <td>".$arrMensaje['timeStamps']."</td>
                                     <td>
-                                        <a href='editar.php'><img src='fa-solid fa-pen-to-square'></a>
-                                        <a><img src='fa-solid fa-pen-to-square'></a>
+                                        <a href='editar.php'><img src='./images/edit.png' style='width: 20px; height: auto; display: inline-block; margin-right: 20px; margin-left: 25px'></a>
+                                        <a href='eliminar.php'><img src='./images/delete.png' style='width: 20px; height: auto; display: inline-block;'></a>
                                     </td>
                                 </tr>";
                             }

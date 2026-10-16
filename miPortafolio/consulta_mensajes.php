@@ -6,7 +6,7 @@ function consultaMensajes(){
     $selectMsj= "select * from mensajes";
 
     try{
-        $rsMsj= mysqli_query($conexion,$selectMsj); //lo que guarde de esta consulta a la bd lo va a pasar a la variable rsmsj
+        $rsMsj= mysqli_query($conexion,$selectMsj); 
         mysqli_close($conexion);
         return $rsMsj;
 

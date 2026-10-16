@@ -273,19 +273,6 @@ footer p {
 
 /*Admin*/
 
-.admin-nav {
-    text-align: center;
-    padding: 15px;
-    background-color: #ffffff;
-}
-
-.admin-nav a {
-    font-size: 20px;
-    text-decoration: none;
-    color: #333;
-    margin: 0 8px;
-}
-
 .admin-card {
     background: white;
     padding: 30px;
