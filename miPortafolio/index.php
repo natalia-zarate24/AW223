@@ -77,7 +77,7 @@
 
           <!-- Seccion contacto -->
           <section>
-            <h2> Contact name</h2>
+            <h2> Contacto</h2>
             <form id="formulario" action="guardar_mensaje.php" method="post">
                 <div class="campo">
                     <label for="">Nombre</label>
@@ -122,5 +122,7 @@
         <p> 2026 Mi portafolio web</p>
         <p> Practica de programacion Web todos los derechos reservados</p>
     </footer> 
+
+    <script src="js/alert_insert.js"></script>
 </body>
 </html>

@@ -257,9 +257,7 @@ form button {
   color: #f0e0ef;
 }
 
-/*Admin*/
-
-.admin-footer {
+footer {
     background-color: #482555;
     color: white;
     text-align: center;
@@ -267,11 +265,13 @@ form button {
     margin-top: 40px;
 }
 
-.admin-footer p {
+footer p {
     margin: 5px 0;
     font-size: 14px;
     color: #ccc;
 }
+
+/*Admin*/
 
 .admin-nav {
     text-align: center;
