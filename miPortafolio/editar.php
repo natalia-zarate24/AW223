@@ -1,12 +1,10 @@
 <?php
 require 'consulta_mensajes.php';
 
-// Verificar que se haya enviado el ID por parámetro GET
 if (isset($_GET['id'])) {
     $idMensaje = $_GET['id'];
     $mensajeData = obtenerMensajePorId($idMensaje);
 
-    // Si no existe el mensaje, redirige a la administración
     if (!$mensajeData) {
         header('Location: admin.php');
         exit;
