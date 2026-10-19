@@ -1,3 +1,21 @@
+<?php
+require 'consulta_mensajes.php';
+
+// Verificar que se haya enviado el ID por parámetro GET
+if (isset($_GET['id'])) {
+    $idMensaje = $_GET['id'];
+    $mensajeData = obtenerMensajePorId($idMensaje);
+
+    // Si no existe el mensaje, redirige a la administración
+    if (!$mensajeData) {
+        header('Location: admin.php');
+        exit;
+    }
+} else {
+    header('Location: admin.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,20 +45,23 @@
             <div class="admin-card admin-card-small">
                 <h2>Editar Mensaje</h2>
                 
-                <form action="" method="POST" class="admin-form">
+                <form action="actualizar_mensaje.php" method="POST" class="admin-form">
+                    <!-- Campo oculto para enviar el ID al procesar el formulario -->
+                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($mensajeData['id']); ?>">
+
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" value="Ana">
+                        <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($mensajeData['nombre']); ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="correo">Correo electrónico</label>
-                        <input type="email" id="correo" name="correo" value="ana@example.com">
+                        <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($mensajeData['correo']); ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5">Hola, me interesa tu portafolio.</textarea>
+                        <textarea id="mensaje" name="mensaje" rows="5"><?php echo htmlspecialchars($mensajeData['mensaje']); ?></textarea>
                     </div>
 
                     <div>
