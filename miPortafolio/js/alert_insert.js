@@ -3,9 +3,6 @@ const estado = parametros.get("estadophp");
 const actualizado = parametros.get("actualizado");
 const eliminado = parametros.get("eliminado");
 
-console.log("Valor de estado:", estado);
-console.log("Valor de actualizado:", actualizado);
-console.log("Valor de eliminado:", eliminado);
 
 if (estado === "exitoso") {
     alert("¡Éxito, tu mensaje fue guardado!");
