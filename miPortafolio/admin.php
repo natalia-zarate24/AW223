@@ -44,7 +44,7 @@
                                     <td>".$arrMensaje['timeStamps']."</td>
                                     <td>
                                         <a href='editar.php?id=".$arrMensaje['id']."'><img src='./images/edit.png' style='width: 20px; height: auto; display: inline-block; margin-right: 20px; margin-left: 25px'></a>
-                                        <a href='eliminar.php?id=".$arrMensaje['id']."'><img src='./images/delete.png' style='width: 20px; height: auto; display: inline-block;'></a>
+                                        <a href='eliminar.php?id=".$arrMensaje['id']."' onclick='return confirm(\"Estás seguro de borrar este mensaje\");'><img src='./images/delete.png' style='width: 20px; height: auto; display: inline-block;'></a>
                                     </td>
                                 </tr>";
                             }
@@ -59,5 +59,7 @@
         <p>2026 Mi Portafolio web</p>
         <p>Práctica de Programación Web todos los derechos reservados</p>
     </footer> 
+
+    <script src="js/alert_insert.js"></script>
 </body>
 </html>

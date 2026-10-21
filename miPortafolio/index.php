@@ -38,7 +38,7 @@
          <section class="">
             <h2>Sobre mi</h2>
             <div class="sobre-mi-contenido"> 
-                <img src=""alt ="">
+                <img src="./images/me.jpeg"alt ="">
                 <div>
                     <p>Algo sobre mi imagen</p>
                     <p>En esta practica estoy aprendiendo HTML & CSS</p>

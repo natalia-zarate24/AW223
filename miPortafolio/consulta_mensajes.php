@@ -23,7 +23,13 @@ function obtenerMensajePorId($id) {
 
     try {
         $resultado = mysqli_query($conexion, $sql);
-        return $resultado;
+        
+        if ($resultado && mysqli_num_rows($resultado) > 0) {
+            $mensaje = mysqli_fetch_assoc($resultado);
+            return $mensaje; 
+        }
+        
+        return null;
     } catch(Exception $e) {
         die('Error al buscar el mensaje: ' . $e->getMessage());
     }
