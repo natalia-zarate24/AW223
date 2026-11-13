@@ -12,7 +12,7 @@ $stmt=$conexion->prepare($sqlInsert);
 $stmt->bind_param("sss", $concepto, $monto, $categoria);
 
 if($stmt->execute()){
-    echo "Mensaje Guardado";
+    header("Location:index.php?estadophp=exitoso");
 }else{
-    echo "Error de guardado:";
+    header("Location:index.php?estadophp=error");
 };

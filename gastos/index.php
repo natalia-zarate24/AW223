@@ -30,15 +30,36 @@
                 </select>
                 <button type="submit">Registrar gasto</button> 
 
-
+                <h3>Listado gastos</h3>
                 <table>
-                    <tr>
-                        <td>Concepto<td>
-                        <td>Categoria<td>
-                        <td>Monto<td>
-                        <td>Fecha<td>
-                        <td>Estado<td>
-                        <td>Accion<td>
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Categoria</th>
+                            <th>Monto</th>
+                            <th>Fecha</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            require_once 'consulta_gasto.php';
+                            $rsMensajes = consultaGasto();
+
+                            while($arrMensaje = mysqli_fetch_array($rsMensajes)){
+                                echo "<tr>
+                                    <td>".$arrMensaje['concepto']."</td>
+                                    <td>".$arrMensaje['categoria']."</td>
+                                    <td>".$arrMensaje['monto']."</td>
+                                    <td>".$arrMensaje['fecha']."</td>
+
+                                </tr>";
+                            }
+                        ?>
+                    </tbody>
+                </table>
+
+
                     
     </main> 
     <script src="guardar_gasto"></script>
