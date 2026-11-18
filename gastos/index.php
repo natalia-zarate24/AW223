@@ -27,6 +27,7 @@
                     <option>Seleccione una categoria</option>
                     <option>Comida</option>
                     <option>Bebida</option>
+                    <option>Profe<
                 </select>
                 <button type="submit">Registrar gasto</button> 
 
