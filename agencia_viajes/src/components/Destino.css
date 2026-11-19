@@ -1,7 +1,79 @@
 .tarjeta {
-    border-width: 3px;
     border-radius: 12px;
     padding: 15px;
     margin: 10px;
-    border-color: aliceblue;
+    background-color: #fff0f3;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta p {
+    font-size: 15px;
+  text-align: left;
+  color: #b9375e;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+h3 {
+  color: #590d22;
+  text-align: left;
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 5px
+}
+
+h4 {
+  text-align: left;
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #e05780;
+}
+
+h5 {
+  text-align: left;
+  font-weight: 800;
+  margin-left: 10px;
+  font-size: 15px;
+  margin-top: 5px;
+  color:#c9184a;
+  margin-bottom: 5px;
+
+}
+
+.botones{
+    display:flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.btn-fav{
+    padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #ffccd5;
+  color: #ff4d6d;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: left;
+}
+
+.btn-detalles{
+    padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  align-items: left;
 }
