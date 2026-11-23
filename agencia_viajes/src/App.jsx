@@ -22,7 +22,7 @@ const destinos = [
     nombre: "Seúl", 
     pais:"Corea", 
     precio:"$29,000", 
-    detalles: "Incluye vuelo + hotel, también puedes encontrar paquetes que incluyan asistencia, traslado desde el aeropuerto y actividades."
+    detalles: "Incluye vuelo + hotel + asistencia y traslado desde el aeropuerto."
   },
 
   { id: 3, 
@@ -30,14 +30,14 @@ const destinos = [
     nombre: "Paris", 
     pais:"Francia", 
     precio:"$15,000", 
-    detalles: "Incluye vuelo + hotel, también puedes encontrar paquetes que incluyan asistencia, traslado desde el aeropuerto y actividades."
+    detalles: "Incluye vuelo  + hotel y traslado desde el aeropuerto."
   },
   { id: 4, 
     imagen: brugge, 
     nombre: "Bruselas", 
     pais:"Bélgica", 
     precio:"$13,000", 
-    detalles: "Incluye vuelo + hotel, también puedes encontrar paquetes que incluyan asistencia, traslado desde el aeropuerto y actividades."
+    detalles: "Incluye únicamente el vuelo, también puedes encontrar paquetes que incluyan asistencia, traslado desde el aeropuerto y actividades."
   },
 
   { id: 5, 
@@ -45,14 +45,21 @@ const destinos = [
     nombre: "Ámsterdam", 
     pais:"Países Bajos", 
     precio:"$16,000", 
-    detalles: "Incluye vuelo + hotel, también puedes encontrar paquetes que incluyan asistencia, traslado desde el aeropuerto y actividades."
+    detalles: "Incluye vuelo + hotel y actividades."
   },
 
 ]
 
 function App() {
   const [favoritos, setFavoritos] = useState(0);
-  const agregarFavorito = () => setFavoritos(favoritos + 1);
+  const [mostrar, setMostrar] = useState(false)
+
+  const cambiarFavorito = (agregado) => {
+    setFavoritos(favoritos + (agregado ? 1 : -1));
+  }
+
+  {/*const agregarFavorito = () => setFavoritos(favoritos + 1);*/}
+
   const [busqueda, setBusqueda] = useState("");
 
   const destinosFiltrados = destinos.filter((d) => 
@@ -69,6 +76,12 @@ function App() {
       <div className='tarjeta-favs'>
         <h2>Destinos favoritos: {favoritos}</h2>
         <p>Tu proxima aventura comienza aqui</p>
+        { mostrar &&
+            <>
+            <p>{detalles}</p>
+            </>
+        }
+        <button className='btn-detalles' onClick={() => setMostrar(!mostrar)}></button>
       </div>
 
       <div  className='tarjeta-buscar'>
@@ -87,7 +100,7 @@ function App() {
             pais={d.pais}
             precio={d.precio}
             detalles={d.detalles}
-            onAgregarFavorito={agregarFavorito}
+            onCambiarFavorito={cambiarFavorito}
           />
         ))}
       </div>
